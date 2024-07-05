@@ -6,5 +6,7 @@ skip_build_index: false
 skip_confirm: true
 include_file:
   - ./base/base.yml
-query: '项目目标: 把antrl4文件转成treesitter的grammar.js文件'
+query: |
+  项目目标: 把antrl4文件转成treesitter的grammar.js文件
+  1. 先基于antlr4/apiLexer.g4生成grammar.js文件
 urls: []
