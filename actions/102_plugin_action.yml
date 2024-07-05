@@ -15,7 +15,7 @@ query: |
   1.可以提供参考的文件treesitter/proto/grammar.js,这个文件是treesitter的proto插件的grammar.js文件
 
   需要解析的文件的相关示例:
-  1.使用api/demo.api做为实际解析文件的示例
+  1.使用api/demo.api做为实际解析文件的示例,并写出test case, 测试文件在根目录下生成，名字为test.js
 
-  根据以上提供的信息生成grammar.js
+  根据以上提供的信息生成在根目录下生成grammar.js
 urls: []
