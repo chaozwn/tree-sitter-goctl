@@ -1,5 +1,5 @@
 
-project_type: .g4
+project_type: .g4,.js
 source_dir: /Users/jayce.zhao/workspace/neovim/tree-sitter-goctl
 target_file: /Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/output.txt
 

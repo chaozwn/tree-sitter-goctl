@@ -1,0 +1,103 @@
+```python
+##File: /Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/treesitter/api/grammar.js
+<<<<<<< SEARCH
+=======
+const
+  letter = /[a-zA-Z]/,
+  decimal_digit = /[0-9]/,
+  octal_digit = /[0-7]/,
+  hex_digit = /[0-9A-Fa-f]/;
+
+module.exports = grammar({
+  name: 'api',
+
+  extras: $ => [$.comment, /\s/],
+
+  rules: {
+    api: $ => seq(
+      optional($.syntax_lit),
+      repeat(choice(
+        $.import_statement,
+        $.info_statement,
+        $.api_body
+      )),
+      $.EOF
+    ),
+
+    syntax_lit: $ => seq('syntax', '=', $.value),
+    api_body: $ => choice($.type_statement, $.service_statement),
+
+    import_statement: $ => repeat1($.import_spec),
+    import_spec: $ => choice($.import_lit, $.import_group),
+    import_lit: $ => seq('import', $.import_value),
+    import_group: $ => seq('import', '(', repeat($.import_value), ')'),
+
+    info_statement: $ => seq('info', '(', $.pair, ')'),
+
+    type_statement: $ => choice($.type_single_spec, $.type_group_spec),
+    type_group_spec: $ => seq('type', '(', repeat(choice($.type_group_alias, $.struct_type)), ')'),
+    type_group_alias: $ => seq($.struct_name_id, $.normal_field_type),
+
+    type_single_spec: $ => choice($.type_alias, $.type_struct),
+    type_struct: $ => seq('type', $.struct_type),
+    type_alias: $ => seq('type', $.struct_name_id, optional('='), $.normal_field_type),
+
+    type_filed: $ => choice($.anonymous_field, $.normal_field, $.struct_type),
+    normal_field: $ => seq($.field_name, $.field_type, optional($.tag)),
+    field_type: $ => choice($.normal_field_type, $.star_field_type, $.map_field_type, $.array_or_slice_type),
+    anonymous_field: $ => seq(optional('*'), $.reference_id),
+    normal_field_type: $ => choice($.GOTYPE, $.reference_id, seq('interface', '{', '}')),
+    star_field_type: $ => seq('*', $.normal_field_type),
+    map_field_type: $ => seq('map', '[', $.field_type, ']', $.field_type),
+    array_or_slice_type: $ => seq(repeat1(seq('[', optional($.NUMBER), ']')), $.field_type),
+
+    struct_type: $ => seq($.struct_name_id, optional('struct'), '{', repeat($.type_filed), '}'),
+    struct_name_id: $ => $.IDENT,
+    field_name: $ => $.IDENT,
+    reference_id: $ => seq(optional($.pkg), $.IDENT),
+    pkg: $ => seq($.IDENT, '.'),
+    tag: $ => $.RAW_STRING,
+
+    service_statement: $ => seq(optional($.service_server_spec), $.service_spec),
+    service_server_spec: $ => seq('@server', '(', $.ident_pair, ')'),
+
+    service_spec: $ => seq('service', $.service_name, '{', repeat($.service_body), '}'),
+    service_name: $ => $.IDENT,
+    service_body: $ => seq(optional(choice($.service_doc, $.service_doc_new)), choice($.service_handler, $.service_handler_new), $.service_route),
+    service_doc: $ => seq('@doc', '(', $.pair, ')'),
+    service_doc_new: $ => seq('@doc', choice($.doc_value, seq('(', $.doc_value, ')'))),
+    service_handler: $ => seq('@server', '(', $.handler_pair, ')'),
+    service_handler_new: $ => seq('@handler', $.handler_value),
+    service_route: $ => seq($.HTTPMETHOD, $.PATH, optional(seq('(', optional($.body), ')')), optional(seq('returns', '(', optional($.body), ')')), ';'),
+
+    ident_pair: $ => repeat(seq($.key, ':', choice($.DURATION, $.ident_value, $.PATH, $.NUMBER))),
+    handler_pair: $ => repeat1(seq($.key, ':', $.handler_value)),
+    ident_value: $ => repeat1(seq($.IDENT, optional(','))),
+    handler_value: $ => $.IDENT,
+    import_value: $ => seq($.VALUE, optional(seq('as', $.IDENT))),
+    doc_value: $ => $.VALUE,
+    pair: $ => repeat(seq($.key, ':', optional($.VALUE))),
+    key: $ => $.IDENT,
+
+    value: $ => choice($.STRING, $.RAW_STRING),
+
+    // Tokens
+    EOF: $ => token.immediate(''),
+    IDENT: $ => token(seq(letter, repeat(choice(letter, decimal_digit, '_', '-')))),
+    VALUE: $ => token(seq('"', repeat(choice(/[^"\\]/, /\\./)), '"')),
+    RAW_STRING: $ => token(seq('`', repeat(/[^`]/), '`')),
+    NUMBER: $ => token(repeat1(decimal_digit)),
+    COMMENT: $ => token(choice(seq('//', /.*/), seq('/*', /[^*]*\*+([^/*][^*]*\*+)*/, '/'))),
+
+    // HTTP Methods
+    HTTPMETHOD: $ => token(choice('get', 'head', 'post', 'put', 'patch', 'delete', 'connect', 'options', 'trace')),
+    PATH: $ => token(repeat1(choice(seq('/', optional(':'), $.IDENT), '/'))),
+
+    // Go types
+    GOTYPE: $ => token(choice('bool', 'uint8', 'uint16', 'uint32', 'uint64', 'int8', 'int16', 'int32', 'int64', 'float32', 'float64', 'complex64', 'complex128', 'string', 'int', 'uint', 'uintptr', 'byte', 'rune', 'time.Time')),
+
+    DURATION: $ => token(seq($.NUMBER, choice('ns', 'us', 'µs', 'ms', 's', 'm', 'h')))
+  }
+});
+>>>>>>> REPLACE
+```

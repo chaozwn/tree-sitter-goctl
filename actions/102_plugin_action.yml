@@ -5,6 +5,17 @@ skip_confirm: true
 include_file:
   - ./base/base.yml
 query: |
-  项目目标: 把antrl4文件转成treesitter的grammar.js文件
-  1. 先基于antlr4/apiLexer.g4生成grammar.js文件
+  我需要开发一个treesitter插件，目的是可以解析.api文件。
+
+  现在有两个现成的antrl4文件
+  1.词法解析文件antlr4/apiLexer.g4
+  2.语法解析文件antlr4/apiParser.g4
+
+  请参考这两个文件，结合treesitter生成逻辑生成一个grammar.js文件
+  1.可以提供参考的文件treesitter/proto/grammar.js,这个文件是treesitter的proto插件的grammar.js文件
+
+  需要解析的文件的相关示例:
+  1.使用api/demo.api做为实际解析文件的示例
+
+  根据以上提供的信息生成grammar.js
 urls: []
