@@ -1,5 +1,3 @@
-project_type: .g4
-code_model: gpt4o_chat
 human_as_model: false
 auto_merge: editblock
 skip_build_index: false

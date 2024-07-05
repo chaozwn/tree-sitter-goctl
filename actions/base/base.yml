@@ -1,9 +1,9 @@
 
-project_type: py
+project_type: .g4
 source_dir: /Users/jayce.zhao/workspace/neovim/tree-sitter-goctl
 target_file: /Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/output.txt
 
-model: deepseek_chat
+model: gpt4o_chat
 model_max_input_length: 30000
 enable_multi_round_generate: false
 
