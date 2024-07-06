@@ -38,4 +38,4 @@ dist/
 *.o
 
 output.txt
-.auto-coder
+.auto-coder/**
