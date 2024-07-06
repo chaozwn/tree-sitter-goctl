@@ -1,6 +1,0 @@
-
-skip_build_index: false
-anti_quota_limit: 0
-index_filter_level: 1
-index_filter_workers: 4
-index_build_workers: 4
