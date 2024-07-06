@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "goctl",
   "rules": {
     "api": {
       "type": "SEQ",

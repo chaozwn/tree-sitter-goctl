@@ -5,7 +5,7 @@ octal_digit = /[0-7]/
 hex_digit = /[0-9A-Fa-f]/
 
 module.exports = grammar({
-  name: 'api',
+  name: 'goctl',
 
   extras: $ => [$.comment, /\s/],
 
