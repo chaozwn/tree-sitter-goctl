@@ -176,7 +176,7 @@ module.exports = grammar({
 
     httpRoute: $ => seq($.HTTPMETHOD, $.PATH),
 
-    identPair: $ => repeat(seq($.key, ':', choice($.DURATION, $.identValue, $.PATH, $.NUMBER))),
+    identPair: $ => repeat1(seq($.key, ':', choice($.DURATION, $.identValue, $.PATH, $.NUMBER))),
 
     handlerPair: $ => repeat1(seq($.key, ':', $.handlerValue)),
 
@@ -188,7 +188,7 @@ module.exports = grammar({
 
     docValue: $ => $.VALUE,
 
-    pair: $ => repeat(seq($.key, ':', optional($.VALUE))),
+    pair: $ => repeat1(seq($.key, ':', optional($.VALUE))),
 
     key: $ => $.IDENT,
 

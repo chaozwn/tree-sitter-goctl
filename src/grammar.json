@@ -971,7 +971,7 @@
       ]
     },
     "identPair": {
-      "type": "REPEAT",
+      "type": "REPEAT1",
       "content": {
         "type": "SEQ",
         "members": [
@@ -1090,7 +1090,7 @@
       "name": "VALUE"
     },
     "pair": {
-      "type": "REPEAT",
+      "type": "REPEAT1",
       "content": {
         "type": "SEQ",
         "members": [
