@@ -2,6 +2,11 @@ syntax = "v1"
 
 import "./base.api"
 
+import (
+    "./base"
+    "./hello"
+)
+
 info (
     title:   "api 文件完整示例写法"
     desc:    "演示如何编写 api 文件"

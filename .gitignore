@@ -40,3 +40,4 @@ dist/
 output.txt
 .auto-coder/**
 .auto-coder/*
+.idea
