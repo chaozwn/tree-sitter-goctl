@@ -1,13 +1,20 @@
 const
   letter = /[a-zA-Z]/,
   decimal_digit = /[0-9]/
-  octal_digit = /[0-7]/
-  hex_digit = /[0-9A-Fa-f]/
+octal_digit = /[0-7]/
+hex_digit = /[0-9A-Fa-f]/
 
 module.exports = grammar({
   name: 'api',
 
   extras: $ => [$.comment, /\s/],
+
+  conflicts: $ => [
+    [$.importStatement],
+    [$.fieldName, $.referenceId],
+    [$.identValue],
+    [$.arrayOrSliceType]
+  ],
 
   rules: {
     api: $ => seq(
@@ -210,18 +217,18 @@ module.exports = grammar({
 
     NUMBER: $ => token(/[0-9]+/),
 
-    DURATION: $ => token(seq(
+    DURATION: $ => seq(
       $.NUMBER,
       choice('ns', 'us', 'µs', 'ms', 's', 'm', 'h')
-    )),
+    ),
 
     HTTPMETHOD: $ => token(choice(
       'get', 'head', 'post', 'put', 'patch', 'delete', 'connect', 'options', 'trace'
     )),
 
-    PATH: $ => token(repeat1(seq(
+    PATH: $ => repeat1(seq(
       choice('/', '/:'),
       $.IDENT
-    )))
+    ))
   }
 });

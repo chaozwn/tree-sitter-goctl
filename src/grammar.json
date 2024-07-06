@@ -1236,49 +1236,46 @@
       }
     },
     "DURATION": {
-      "type": "TOKEN",
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "SYMBOL",
-            "name": "NUMBER"
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "ns"
-              },
-              {
-                "type": "STRING",
-                "value": "us"
-              },
-              {
-                "type": "STRING",
-                "value": "µs"
-              },
-              {
-                "type": "STRING",
-                "value": "ms"
-              },
-              {
-                "type": "STRING",
-                "value": "s"
-              },
-              {
-                "type": "STRING",
-                "value": "m"
-              },
-              {
-                "type": "STRING",
-                "value": "h"
-              }
-            ]
-          }
-        ]
-      }
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "NUMBER"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "ns"
+            },
+            {
+              "type": "STRING",
+              "value": "us"
+            },
+            {
+              "type": "STRING",
+              "value": "µs"
+            },
+            {
+              "type": "STRING",
+              "value": "ms"
+            },
+            {
+              "type": "STRING",
+              "value": "s"
+            },
+            {
+              "type": "STRING",
+              "value": "m"
+            },
+            {
+              "type": "STRING",
+              "value": "h"
+            }
+          ]
+        }
+      ]
     },
     "HTTPMETHOD": {
       "type": "TOKEN",
@@ -1325,31 +1322,28 @@
       }
     },
     "PATH": {
-      "type": "TOKEN",
+      "type": "REPEAT1",
       "content": {
-        "type": "REPEAT1",
-        "content": {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "/"
-                },
-                {
-                  "type": "STRING",
-                  "value": "/:"
-                }
-              ]
-            },
-            {
-              "type": "SYMBOL",
-              "name": "IDENT"
-            }
-          ]
-        }
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "/"
+              },
+              {
+                "type": "STRING",
+                "value": "/:"
+              }
+            ]
+          },
+          {
+            "type": "SYMBOL",
+            "name": "IDENT"
+          }
+        ]
       }
     }
   },
@@ -1363,7 +1357,21 @@
       "value": "\\s"
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    [
+      "importStatement"
+    ],
+    [
+      "fieldName",
+      "referenceId"
+    ],
+    [
+      "identValue"
+    ],
+    [
+      "arrayOrSliceType"
+    ]
+  ],
   "precedences": [],
   "externals": [],
   "inline": [],

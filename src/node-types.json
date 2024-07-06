@@ -1,0 +1,1134 @@
+[
+  {
+    "type": "DURATION",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "NUMBER",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "GOTYPE",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "PATH",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "IDENT",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "anonymousField",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "referenceId",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "api",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "EOF",
+          "named": true
+        },
+        {
+          "type": "apiBody",
+          "named": true
+        },
+        {
+          "type": "importStatement",
+          "named": true
+        },
+        {
+          "type": "infoStatement",
+          "named": true
+        },
+        {
+          "type": "syntaxLit",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "apiBody",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "serviceStatement",
+          "named": true
+        },
+        {
+          "type": "typeStatement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "arrayOrSliceType",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "NUMBER",
+          "named": true
+        },
+        {
+          "type": "fieldType",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "GOTYPE",
+          "named": true
+        },
+        {
+          "type": "IDENT",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "docValue",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "VALUE",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fieldName",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "IDENT",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fieldType",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "arrayOrSliceType",
+          "named": true
+        },
+        {
+          "type": "mapFieldType",
+          "named": true
+        },
+        {
+          "type": "normalFieldType",
+          "named": true
+        },
+        {
+          "type": "starFieldType",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "handlerPair",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "handlerValue",
+          "named": true
+        },
+        {
+          "type": "key",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "handlerValue",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "IDENT",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "httpRoute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "HTTPMETHOD",
+          "named": true
+        },
+        {
+          "type": "PATH",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "identPair",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "DURATION",
+          "named": true
+        },
+        {
+          "type": "NUMBER",
+          "named": true
+        },
+        {
+          "type": "PATH",
+          "named": true
+        },
+        {
+          "type": "identValue",
+          "named": true
+        },
+        {
+          "type": "key",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "identValue",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "IDENT",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "importGroup",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "importValue",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "importLit",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "importValue",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "importSpec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "importGroup",
+          "named": true
+        },
+        {
+          "type": "importLit",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "importStatement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "importSpec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "importValue",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "IDENT",
+          "named": true
+        },
+        {
+          "type": "VALUE",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "infoStatement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "pair",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "key",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "IDENT",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapFieldType",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "fieldType",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "normalField",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "fieldName",
+          "named": true
+        },
+        {
+          "type": "fieldType",
+          "named": true
+        },
+        {
+          "type": "tag",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "normalFieldType",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "GOTYPE",
+          "named": true
+        },
+        {
+          "type": "referenceId",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pair",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "VALUE",
+          "named": true
+        },
+        {
+          "type": "key",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "referenceId",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "IDENT",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "serviceBody",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "serviceDoc",
+          "named": true
+        },
+        {
+          "type": "serviceDocNew",
+          "named": true
+        },
+        {
+          "type": "serviceHandler",
+          "named": true
+        },
+        {
+          "type": "serviceHandlerNew",
+          "named": true
+        },
+        {
+          "type": "serviceRoute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "serviceDoc",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "pair",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "serviceDocNew",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "docValue",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "serviceHandler",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "handlerPair",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "serviceHandlerNew",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "handlerValue",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "serviceName",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "IDENT",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "serviceRoute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "body",
+          "named": true
+        },
+        {
+          "type": "httpRoute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "serviceServerSpec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identPair",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "serviceSpec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "serviceBody",
+          "named": true
+        },
+        {
+          "type": "serviceName",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "serviceStatement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "serviceServerSpec",
+          "named": true
+        },
+        {
+          "type": "serviceSpec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "starFieldType",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "normalFieldType",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "structNameId",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "IDENT",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "structType",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "structNameId",
+          "named": true
+        },
+        {
+          "type": "typeFiled",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "syntaxLit",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "VALUE",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "RAW_STRING",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "typeAlias",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "normalFieldType",
+          "named": true
+        },
+        {
+          "type": "structNameId",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "typeFiled",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "anonymousField",
+          "named": true
+        },
+        {
+          "type": "normalField",
+          "named": true
+        },
+        {
+          "type": "structType",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "typeGroupAlias",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "normalFieldType",
+          "named": true
+        },
+        {
+          "type": "structNameId",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "typeGroupSpec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "structType",
+          "named": true
+        },
+        {
+          "type": "typeGroupAlias",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "typeSingleSpec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "typeAlias",
+          "named": true
+        },
+        {
+          "type": "typeStruct",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "typeStatement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "typeGroupSpec",
+          "named": true
+        },
+        {
+          "type": "typeSingleSpec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "typeStruct",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "structType",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": "/:",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "@doc",
+    "named": false
+  },
+  {
+    "type": "@handler",
+    "named": false
+  },
+  {
+    "type": "@server",
+    "named": false
+  },
+  {
+    "type": "EOF",
+    "named": true
+  },
+  {
+    "type": "HTTPMETHOD",
+    "named": true
+  },
+  {
+    "type": "IDENT",
+    "named": true
+  },
+  {
+    "type": "NUMBER",
+    "named": true
+  },
+  {
+    "type": "RAW_STRING",
+    "named": true
+  },
+  {
+    "type": "VALUE",
+    "named": true
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "as",
+    "named": false
+  },
+  {
+    "type": "bool",
+    "named": false
+  },
+  {
+    "type": "byte",
+    "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
+  },
+  {
+    "type": "complex128",
+    "named": false
+  },
+  {
+    "type": "complex64",
+    "named": false
+  },
+  {
+    "type": "float32",
+    "named": false
+  },
+  {
+    "type": "float64",
+    "named": false
+  },
+  {
+    "type": "h",
+    "named": false
+  },
+  {
+    "type": "import",
+    "named": false
+  },
+  {
+    "type": "info",
+    "named": false
+  },
+  {
+    "type": "int",
+    "named": false
+  },
+  {
+    "type": "int16",
+    "named": false
+  },
+  {
+    "type": "int32",
+    "named": false
+  },
+  {
+    "type": "int64",
+    "named": false
+  },
+  {
+    "type": "int8",
+    "named": false
+  },
+  {
+    "type": "interface",
+    "named": false
+  },
+  {
+    "type": "m",
+    "named": false
+  },
+  {
+    "type": "map",
+    "named": false
+  },
+  {
+    "type": "ms",
+    "named": false
+  },
+  {
+    "type": "ns",
+    "named": false
+  },
+  {
+    "type": "returns",
+    "named": false
+  },
+  {
+    "type": "rune",
+    "named": false
+  },
+  {
+    "type": "s",
+    "named": false
+  },
+  {
+    "type": "service",
+    "named": false
+  },
+  {
+    "type": "string",
+    "named": false
+  },
+  {
+    "type": "struct",
+    "named": false
+  },
+  {
+    "type": "syntax",
+    "named": false
+  },
+  {
+    "type": "time.Time",
+    "named": false
+  },
+  {
+    "type": "type",
+    "named": false
+  },
+  {
+    "type": "uint",
+    "named": false
+  },
+  {
+    "type": "uint16",
+    "named": false
+  },
+  {
+    "type": "uint32",
+    "named": false
+  },
+  {
+    "type": "uint64",
+    "named": false
+  },
+  {
+    "type": "uint8",
+    "named": false
+  },
+  {
+    "type": "uintptr",
+    "named": false
+  },
+  {
+    "type": "us",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  },
+  {
+    "type": "µs",
+    "named": false
+  }
+]
