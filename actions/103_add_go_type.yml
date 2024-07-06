@@ -1,0 +1,58 @@
+human_as_model: false
+auto_merge: editblock
+skip_build_index: false
+skip_confirm: true
+include_file:
+  - ./base/base.yml
+query: |
+  现在有两个参考用antrl4文件修改grammer.js:
+  1.词法解析文件antlr4/apiLexer.g4
+  2.语法解析文件antlr4/apiParser.g4
+
+  目前./grammar.js文件丢失了GOTYPE.
+  这个是编译报错：
+  $ tree-sitter generate
+  [stdin]:201
+        throw value
+        ^
+
+  ReferenceError: Undefined symbol 'GOTYPE'
+      at Object.get ([stdin]:219:23)
+      at Proxy.normalFieldType (/Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/grammar.js:92:9)
+      at grammar ([stdin]:306:42)
+      at Object.<anonymous> (/Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/grammar.js:7:18)
+      at Module._compile (node:internal/modules/cjs/loader:1369:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1427:10)
+      at Module.load (node:internal/modules/cjs/loader:1206:32)
+      at Module._load (node:internal/modules/cjs/loader:1022:12)
+      at Module.require (node:internal/modules/cjs/loader:1231:19)
+      at require (node:internal/modules/helpers:179:18) {
+    symbol: { type: 'SYMBOL', name: 'GOTYPE' }
+  }
+
+  转换参考段落：
+  // DATA TYPE
+  GOTYPE:     BOOL|UINT8|UINT16|UINT32|UINT64|INT8|INT16|INT32|INT64|FLOAT32|FLOAT32|FLOAT64|COMPLEX64|COMPLEX128|STRING|INT|UINT|UINTPTR|BYTE|RUNE|TIME;
+  BOOL:       'bool';
+  UINT8:      'uint8';
+  UINT16:     'uint16';
+  UINT32:     'uint32';
+  UINT64:     'uint64';
+  INT8:       'int8';
+  INT16:      'int16';
+  INT32:      'int32';
+  INT64:      'int64';
+  FLOAT32:    'float32';
+  FLOAT64:    'float64';
+  COMPLEX64:  'complex64';
+  COMPLEX128: 'complex128';
+  STRING:     'string';
+  INT:        'int';
+  UINT:       'uint';
+  UINTPTR:    'uintptr';
+  BYTE:       'byte';
+  RUNE:       'rune';
+  TIME:       'time.Time';
+
+
+urls: []
