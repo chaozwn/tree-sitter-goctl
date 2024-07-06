@@ -20,5 +20,7 @@ query: |
   error Command failed with exit code 1.
   info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 
+  帮忙修正./grammar.js中identPair为空的情况，如果给修改成start_rule，那么就修改成start_rule.如果不能直接移除掉。
+
 
 urls: []
