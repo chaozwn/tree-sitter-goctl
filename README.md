@@ -12,3 +12,9 @@ TODO
   - [ ] matrix
   - [ ] crates.io
   - [ ] pypi
+
+# Tree-sitter GoCTL
+
+Tree-sitter GoCTL 是一个用于解析和处理 GoCTL 和 Protobuf 语法的树状解析器。它使用 Tree-sitter 解析库来生成语法树，并提供了多种语言的绑定。
+
+## 项目结构
