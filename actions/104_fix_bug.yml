@@ -9,7 +9,6 @@ query: |
   1.词法解析文件antlr4/apiLexer.g4
   2.语法解析文件antlr4/apiParser.g4
 
-  目前./grammar.js文件丢失了GOTYPE.
   这个是编译报错：
   $ tree-sitter generate
   The rule `identPair` matches the empty string.
