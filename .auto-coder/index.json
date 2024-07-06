@@ -22,5 +22,17 @@
     "symbols": "用途：主要用于导入模块并处理路径。\n变量：root\n类：\n导入语句：const root = require(\"path\").join(__dirname, \"..\", \"..\");^^module.exports = require(\"node-gyp-build\")(root);^^module.exports.nodeTypeInfo = require(\"../../src/node-types.json\");",
     "last_modified": 1720164474.82681,
     "md5": "b99c8a4f8eb002a169e20af49966d427"
+  },
+  "/Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/grammar.js": {
+    "module_name": "/Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/grammar.js",
+    "symbols": "用途：主要用于定义 API 语法规则。\n函数：\n变量：letter, decimal_digit, octal_digit, hex_digit\n类：\n导入语句：",
+    "last_modified": 1720176233.9203556,
+    "md5": "b4ccb9d518f5553656343d3cc9ecae4d"
+  },
+  "/Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/test.js": {
+    "module_name": "/Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/test.js",
+    "symbols": "用途：主要用于解析和处理源代码。\n函数：console.log\n变量：parser, sourceCode, tree\n类：\n导入语句：const Parser = require('tree-sitter');^^const Api = require('./treesitter/api');",
+    "last_modified": 1720176233.920557,
+    "md5": "4c25d889dd594d6627a7ea0e1c111f06"
   }
 }
