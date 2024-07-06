@@ -1,0 +1,24 @@
+human_as_model: false
+auto_merge: editblock
+skip_build_index: false
+skip_confirm: true
+include_file:
+  - ./base/base.yml
+query: |
+  现在有两个参考用antrl4文件修改grammer.js:
+  1.词法解析文件antlr4/apiLexer.g4
+  2.语法解析文件antlr4/apiParser.g4
+
+  目前./grammar.js文件丢失了GOTYPE.
+  这个是编译报错：
+  $ tree-sitter generate
+  The rule `identPair` matches the empty string.
+
+  Tree-sitter does not support syntactic rules that match the empty string
+  unless they are used only as the grammar's start rule.
+
+  error Command failed with exit code 1.
+  info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+urls: []

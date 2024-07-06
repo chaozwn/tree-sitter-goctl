@@ -25,9 +25,9 @@
   },
   "/Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/grammar.js": {
     "module_name": "/Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/grammar.js",
-    "symbols": "用途：主要用于定义 API 语法规则。\n函数：\n变量：letter, decimal_digit, octal_digit, hex_digit\n类：\n导入语句：",
-    "last_modified": 1720176233.9203556,
-    "md5": "b4ccb9d518f5553656343d3cc9ecae4d"
+    "symbols": "用途：解析和处理API语法的语法树\n函数：letter, decimal_digit, octal_digit, hex_digit\n变量：\n类：\n导入语句：",
+    "last_modified": 1720245549.4217632,
+    "md5": "0576093b5b0dfa2774d8d739f1fa7cc3"
   },
   "/Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/test.js": {
     "module_name": "/Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/test.js",
