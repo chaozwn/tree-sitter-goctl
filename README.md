@@ -1,20 +1,20 @@
 # tree-sitter-goctl
 
-_Note: This is a goctl api file parsing package. Support various languages to parse api files.
+**tree-sitter-goctl** is a package designed for parsing goctl API files, offering support for a multitude of programming languages to parse API files seamlessly.
 
-[go-zero](https://go-zero.dev/) go-zero website
+## Useful Links
 
-[goctl](https://go-zero.dev/en/docs/tasks/dsl/api) goctl introduction
+- [go-zero Official Website](https://go-zero.dev/) - Discover more about go-zero.
+- [goctl Overview](https://go-zero.dev/en/docs/tasks/dsl/api) - Dive deeper into the functionalities and usage of goctl.
 
-TODO
-- [ ] **Publish to all languages**
-  - [ ] npm
-  - [ ] matrix
-  - [ ] crates.io
-  - [ ] pypi
+## To-Do List
 
-# Tree-sitter GoCTL
+We are actively working to make **tree-sitter-goctl** available across various platforms to enable a broader range of developers to utilize it with ease. Here is our roadmap:
 
-Tree-sitter GoCTL 是一个用于解析和处理 GoCTL 和 Protobuf 语法的树状解析器。它使用 Tree-sitter 解析库来生成语法树，并提供了多种语言的绑定。
+- [ ] **Publish to All Languages**
+  - [ ] Release on npm
+  - [ ] Release on Matrix
+  - [ ] Release on crates.io
+  - [ ] Release on pypi
 
-## 项目结构
+Stay tuned for updates on our progress!

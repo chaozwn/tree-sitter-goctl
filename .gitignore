@@ -41,3 +41,7 @@ output.txt
 .auto-coder/**
 .auto-coder/*
 .idea
+actions/**
+actions/*
+antlr4
+
