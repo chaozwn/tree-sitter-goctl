@@ -1,0 +1,16 @@
+auto_merge: editblock
+human_as_model: false
+include_file:
+- ./base/base.yml
+query: 帮我完善下README.md
+skip_build_index: true
+skip_confirm: true
+urls:
+- /Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/antlr4/apiParser.g4
+- /Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/antlr4/apiLexer.g4
+- /Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/src/grammar.json
+- /Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/grammar.js
+- /Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/treesitter/proto/grammar.js
+- /Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/treesitter/proto/injections.scm
+- /Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/treesitter/proto/folds.scm
+- /Users/jayce.zhao/workspace/neovim/tree-sitter-goctl/treesitter/proto/highlights.scm
