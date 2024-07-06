@@ -13,7 +13,8 @@ module.exports = grammar({
     [$.importStatement],
     [$.fieldName, $.referenceId],
     [$.identValue],
-    [$.arrayOrSliceType]
+    [$.arrayOrSliceType],
+    [$.identValue, $.PATH]
   ],
 
   rules: {
@@ -91,6 +92,7 @@ module.exports = grammar({
       $.mapFieldType,
       $.arrayOrSliceType
     ),
+
     GOTYPE: $ => choice(
       'bool', 'uint8', 'uint16', 'uint32', 'uint64', 'int8', 'int16', 'int32', 'int64',
       'float32', 'float64', 'complex64', 'complex128', 'string', 'int', 'uint', 'uintptr',
@@ -223,9 +225,13 @@ module.exports = grammar({
       'get', 'head', 'post', 'put', 'patch', 'delete', 'connect', 'options', 'trace'
     )),
 
-    PATH: $ => repeat1(seq(
-      choice('/', '/:'),
-      $.IDENT
-    ))
+    PATH: $ => seq(
+      optional(choice('/', '/:')),
+      $.IDENT,
+      repeat(seq(
+        choice('/', '/:'),
+        $.IDENT
+      ))
+    )
   }
 })

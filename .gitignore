@@ -46,3 +46,4 @@ actions/*
 antlr4
 .DS_Store
 
+goctl.dylib.dSYM/Contents

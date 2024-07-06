@@ -1322,29 +1322,59 @@
       }
     },
     "PATH": {
-      "type": "REPEAT1",
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "CHOICE",
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "/"
+                },
+                {
+                  "type": "STRING",
+                  "value": "/:"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "IDENT"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
             "members": [
               {
-                "type": "STRING",
-                "value": "/"
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "/"
+                  },
+                  {
+                    "type": "STRING",
+                    "value": "/:"
+                  }
+                ]
               },
               {
-                "type": "STRING",
-                "value": "/:"
+                "type": "SYMBOL",
+                "name": "IDENT"
               }
             ]
-          },
-          {
-            "type": "SYMBOL",
-            "name": "IDENT"
           }
-        ]
-      }
+        }
+      ]
     }
   },
   "extras": [
@@ -1370,6 +1400,10 @@
     ],
     [
       "arrayOrSliceType"
+    ],
+    [
+      "identValue",
+      "PATH"
     ]
   ],
   "precedences": [],
