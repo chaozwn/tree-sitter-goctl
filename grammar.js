@@ -24,7 +24,6 @@ module.exports = grammar({
         $.infoStatement,
         $.apiBody
       )),
-      $.EOF
     ),
 
     syntaxLit: $ => seq('syntax', '=', $.VALUE),
@@ -178,7 +177,7 @@ module.exports = grammar({
       $.httpRoute,
       optional(seq('(', optional($.body), ')')),
       optional(seq('returns', '(', optional($.body), ')')),
-      ';'
+      optional(';')
     ),
 
     httpRoute: $ => seq($.HTTPMETHOD, $.PATH),
@@ -198,8 +197,6 @@ module.exports = grammar({
     pair: $ => repeat1(seq($.key, ':', optional($.VALUE))),
 
     key: $ => $.IDENT,
-
-    EOF: $ => 'EOF',
 
     VALUE: $ => token(seq('"', repeat(/[^"\r\n:]/), '"')),
 
@@ -231,4 +228,4 @@ module.exports = grammar({
       $.IDENT
     ))
   }
-});
+})

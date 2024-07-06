@@ -35,10 +35,6 @@
               }
             ]
           }
-        },
-        {
-          "type": "SYMBOL",
-          "name": "EOF"
         }
       ]
     },
@@ -952,8 +948,16 @@
           ]
         },
         {
-          "type": "STRING",
-          "value": ";"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": ";"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },
@@ -1120,10 +1124,6 @@
     "key": {
       "type": "SYMBOL",
       "name": "IDENT"
-    },
-    "EOF": {
-      "type": "STRING",
-      "value": "EOF"
     },
     "VALUE": {
       "type": "TOKEN",

@@ -55,12 +55,8 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
-        {
-          "type": "EOF",
-          "named": true
-        },
         {
           "type": "apiBody",
           "named": true
@@ -938,10 +934,6 @@
   {
     "type": "@server",
     "named": false
-  },
-  {
-    "type": "EOF",
-    "named": true
   },
   {
     "type": "HTTPMETHOD",
