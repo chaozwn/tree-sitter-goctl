@@ -1,9 +1,3 @@
-const
-  letter = /[a-zA-Z]/,
-  decimal_digit = /[0-9]/
-octal_digit = /[0-7]/
-hex_digit = /[0-9A-Fa-f]/
-
 module.exports = grammar({
   name: 'goctl',
 
@@ -14,7 +8,9 @@ module.exports = grammar({
     [$.fieldName, $.referenceId],
     [$.identValue],
     [$.arrayOrSliceType],
-    [$.identValue, $.PATH]
+    [$.identValue, $.PATH],
+    [$.COMMON_PATH],
+    [$.PATH]
   ],
 
   rules: {
@@ -225,13 +221,25 @@ module.exports = grammar({
       'get', 'head', 'post', 'put', 'patch', 'delete', 'connect', 'options', 'trace'
     )),
 
-    PATH: $ => seq(
-      optional(choice('/', '/:')),
+    DYNAMIC_PATH: $ => seq(
+      '/:',
       $.IDENT,
-      repeat(seq(
-        choice('/', '/:'),
-        $.IDENT
+    ),
+
+    COMMON_PATH: $ => seq(
+      '/',
+      optional(choice(
+        $.IDENT,
+        $.NUMBER
       ))
+    ),
+
+    PATH: $ => repeat1(
+      choice(
+        $.IDENT,
+        $.COMMON_PATH,
+        $.DYNAMIC_PATH
+      )
     )
   }
 })

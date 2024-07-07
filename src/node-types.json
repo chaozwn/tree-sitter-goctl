@@ -1,5 +1,24 @@
 [
   {
+    "type": "COMMON_PATH",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "IDENT",
+          "named": true
+        },
+        {
+          "type": "NUMBER",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "DURATION",
     "named": true,
     "fields": {},
@@ -9,6 +28,21 @@
       "types": [
         {
           "type": "NUMBER",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "DYNAMIC_PATH",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "IDENT",
           "named": true
         }
       ]
@@ -27,6 +61,14 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "COMMON_PATH",
+          "named": true
+        },
+        {
+          "type": "DYNAMIC_PATH",
+          "named": true
+        },
         {
           "type": "IDENT",
           "named": true
